@@ -1,0 +1,530 @@
+#container {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 820px;
+  background: url(https://washington.org/sites/default/files/2023-06/Kramers-Bookstore.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.banner::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to top, #fff, transparent);
+}
+
+.banner h1 {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  color: #fff;
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.bestseller,
+.sale,
+.favourite {
+  position: relative;
+  width: calc(90% - 6px);
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.bestseller h1,
+.sale h1,
+.favourite h1 {
+  position: relative;
+  display: inline-block;
+  margin: 50px 0;
+  font-family: system-ui, sans-serif;
+}
+
+.bestseller-content::-webkit-scrollbar,
+.sale-content::-webkit-scrollbar,
+.favourite-content::-webkit-scrollbar {
+  display: none;
+}
+
+
+.more {
+  position: absolute;
+  left: 50%;
+  /* bottom: -50px; */
+  transform: translateX(-50%);
+  color: #6c5ce7;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.more:hover {
+  text-decoration: underline;
+}
+
+.bestseller-content .item-products,
+.sale-content .item-products,
+.favourite-content .item-products {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  user-select: none;
+  scroll-snap-align: start;
+  flex: 1 0 300px;
+  border-radius: 5px 30px;
+  transition: 0.5s;
+  box-shadow: 0 0 2px 0 #b2bec3;
+}
+
+.bestseller-content .item-products .name,
+.sale-content .item-products .name,
+.favourite-content .item-products .name {
+  padding: 0 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bestseller-content .item-products .price,
+.sale-content .item-products .price,
+.favourite-content .item-products .price {
+  position: relative;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.bestseller-content .item-products .price::after,
+.sale-content .item-products .price::after,
+.favourite-content .item-products .price::after {
+  position: absolute;
+  content: "đ";
+  top: -2px;
+  font-size: 13px;
+  color: #e74c3c;
+}
+
+.bestseller-content .item-products .item-img,
+.sale-content .item-products .item-img,
+.favourite-content .item-products .item-img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s;
+  border-bottom: 1px solid #dfe6e9;
+}
+
+.swap-content .item-products:hover {
+  box-shadow: 0 10px 50px 0 #dfe6e9;
+  border-radius: 5px 30px;
+}
+
+.bestseller-content .item-products:hover,
+.sale-content .item-products:hover,
+.favourite-content .item-products:hover {
+  box-shadow: 0 5px 20px 0 #dfe6e9;
+}
+
+.bestseller-content .item-products:hover .item-img,
+.sale-content .item-products:hover .item-img,
+.favourite-content .item-products:hover .item-img,
+.swap-content .item-products:hover .item-img {
+  border-radius: 0;
+  box-shadow: 0 0 5px 0 #b2bec3;
+  border-radius: 0 0 0 30px;
+}
+
+.bestseller-content .item-products:hover .name,
+.sale-content .item-products:hover .name,
+.favourite-content .item-products:hover .name,
+.swap-content .item-products:hover .name {
+  color: #e74c3c;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .banner {
+    height: 500px;
+  }
+
+  .banner h1 {
+    margin: 0px 0;
+  }
+
+  .bestseller-content,
+  .sale-content,
+  .favourite-content {
+    height: 400px;
+    gap: 35px;
+  }
+
+  .bestseller-content .item-products,
+  .sale-content .item-products,
+  .favourite-content .item-products {
+    height: 300px;
+    flex: 1 0 200px;
+  }
+
+  .bestseller-content .item-products .name,
+  .sale-content .item-products .name,
+  .favourite-content .item-products .name {
+    font-size: 13px;
+  }
+
+  .bestseller-content .item-products .price,
+  .sale-content .item-products .price,
+  .favourite-content .item-products .price {
+    margin-top: 5px;
+  }
+
+  .bestseller h1,
+  .sale h1,
+  .favourite h1 {
+    margin: 20px 0;
+  }
+}
+
+/* Phone */
+@media screen and (min-width: 320px) and (max-width: 430px) {
+  .banner {
+    height: 300px;
+    gap: 10px;
+  }
+
+  .banner h1 {
+    font-size: 40px;
+  }
+
+
+  .bestseller h1,
+  .sale h1,
+  .favourite h1 {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+
+  .bestseller-content,
+  .sale-content,
+  .favourite-content {
+    height: 520px;
+    overflow: hidden !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: unset;
+    gap: 15px;
+  }
+
+  .bestseller-content .item-products,
+  .sale-content .item-products,
+  .favourite-content .item-products {
+    width: 150px;
+    height: 250px;
+    flex: 0 1 150px;
+    border-radius: 5px;
+  }
+
+  .bestseller-content .item-products .name,
+  .sale-content .item-products .name,
+  .favourite-content .item-products .name {
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .bestseller-content .item-products .price,
+  .sale-content .item-products .price,
+  .favourite-content .item-products .price {
+    margin-top: 0;
+    font-size: 10px;
+  }
+
+  .bestseller-content .item-products .price::after,
+  .sale-content .item-products .price::after,
+  .favourite-content .item-products .price::after {
+    font-size: 8px;
+  }
+
+  .more {
+    bottom: -30px;
+    font-size: 14px;
+  }
+}
+
+
+.bt-card-hotel-5 {
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  border-radius: 8px;
+  overflow: hidden;
+  height:700px;
+}
+.bt-card-hotel-5:hover .card-image img {
+  transform: scale(1.1);
+}
+.bt-card-hotel-5 .card-image {
+  height: 200px;
+  display: block;
+  overflow: hidden;
+}
+.bt-card-hotel-5 .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: linear 0.3s;
+}
+.bt-card-hotel-5 .card-body {
+  padding: 24px;
+}
+.bt-card-hotel-5 .card-body-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.bt-card-hotel-5 .card-title-link {
+  font-weight: 700;
+  font-size: 24px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.bt-card-hotel-5 .card-servies-icon {
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+  border-radius: 100rem;
+  background: #007ae9;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bt-card-hotel-5 .card-servies-icon svg {
+  height: 16px;
+  width: 16px;
+}
+.bt-card-hotel-5 .card-vote {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.bt-card-hotel-5 .vote-list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bt-card-hotel-5 .vote-item {
+  color: #ffc22b;
+}
+.bt-card-hotel-5 .vote-item:last-child {
+  color: #ebeced;
+}
+.bt-card-hotel-5 .card-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.bt-card-hotel-5 .card-meta-item {
+  padding: 5px 14px;
+  border-radius: 4px;
+  border: 1px solid #d7d8d9;
+  font-size: 12px;
+  color: #007ae9;
+  font-weight: 700;
+}
+.bt-card-hotel-5 .card-price-current {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+.bt-card-hotel-5 .card-price-current span {
+  font-size: 16px;
+}
+.bt-card-hotel-5 .card-price-old {
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 600;
+  color: #b1b4b9;
+  text-align: right;
+}
+.bt-card-hotel-5 .card-price-old span {
+  font-size: 12px;
+}
+.bt-card-hotel-5 .card-desc {
+  color: #6e798c;
+  text-align: justify;
+  margin-bottom: 32px;
+   display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.bt-card-hotel-5 .card-price-saving {
+  text-align: center;
+  color: #1dc071;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.bt-card-hotel-5 .card-price-saving span {
+  font-weight: 600;
+}
+.bt-card-hotel-5 .card-button {
+  display: block;
+  text-align: center;
+  padding: 16px 40px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  background-color: #1dc071;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+.bt-card-hotel-5 .card-button:hover::before {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+.bt-card-hotel-5 .card-button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: auto;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: #fff;
+  opacity: 0.1;
+  z-index: -1;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.faq{
+  width: 100%;
+  height: 700px;
+  background: url(https://thumbs.dreamstime.com/b/old-book-flying-letters-magic-light-background-bookshelf-library-ancient-books-as-symbol-knowledge-history-218640948.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding : 40px;
+  
+}
+.faq-header{
+  text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 55px #000, 0 0 75px #000;
+}
+
+
+/*  footer */
+
+.fui-footer-3 {
+  width: 100%;
+  padding: 40px 32px 20px;
+  background-color: #22242a;
+  color: #f1f5f9;
+}
+.fui-footer-3 .footer-category-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.fui-footer-3 .footer-category:first-child {
+  width: 320px;
+}
+.fui-footer-3 .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.fui-footer-3 .footer-logo img {
+  height: 40px;
+}
+.fui-footer-3 .footer-desc {
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.fui-footer-3 .copy-right {
+  margin-top: 24px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.fui-footer-3 .social-list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.fui-footer-3 .social-link {
+  transition: linear 0.25s;
+}
+.fui-footer-3 .social-link:hover {
+  opacity: 0.5;
+}
+.fui-footer-3 .footer-heading {
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+.fui-footer-3 .footer-category-item {
+  margin-bottom: 32px;
+}
+.fui-footer-3 .footer-category-item:last-child {
+  margin-bottom: 0;
+}
+.fui-footer-3 .footer-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.fui-footer-3 .footer-link {
+  transition: linear 0.2s;
+}
+.fui-footer-3 .footer-link:hover {
+  color: #1dc071;
+}
+.fui-footer-3 .footer-bottom {
+  margin-top: 32px;
+}
+.fui-footer-3 .footer-bottom-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.fui-footer-3 .footer-bottom-link {
+  font-size: 14px;
+  transition: linear 0.2s;
+}
+.fui-footer-3 .footer-bottom-link:hover {
+  color: #1dc071;
+}

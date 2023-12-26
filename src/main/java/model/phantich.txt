@@ -1,0 +1,48 @@
+
+
+- Book
+idBook
+title
+idAuthor
+publicYear
+price 
+available
+description
+category_code
+fileName
+comment (array)
+star : double
+
+-category 
+code 
+title
+
+
+
+-user
+idUser (db tự ren)
+userName
+password
+fullname 
+sex
+address 
+delivery address
+Date of birth
+email
+Đăng kí nhận email
+
+
+-order 
+orderid
+userid
+quality
+
+
+-author 
+authorId
+authorName
+authorDes
+authorDate
+
+
+

@@ -1,0 +1,156 @@
+
+
+.container{
+	margin-top: 5rem;
+}
+.bt-card-hotel-5 {
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .bt-card-hotel-5:hover .card-image img {
+    transform: scale(1.1);
+  }
+  .bt-card-hotel-5 .card-image {
+    height: 256px;
+    display: block;
+    overflow: hidden;
+  }
+  .bt-card-hotel-5 .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: linear 0.3s;
+  }
+  .bt-card-hotel-5 .card-body {
+    padding: 24px;
+  }
+  .bt-card-hotel-5 .card-body-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+  .bt-card-hotel-5 .card-title-link {
+    font-weight: 700;
+    font-size: 24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+  }
+  
+  .bt-card-hotel-5 .card-servies-icon {
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+    border-radius: 100rem;
+    background: #007ae9;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bt-card-hotel-5 .card-servies-icon svg {
+    height: 16px;
+    width: 16px;
+  }
+  .bt-card-hotel-5 .card-vote {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .bt-card-hotel-5 .vote-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .bt-card-hotel-5 .vote-item {
+    color: #ffc22b;
+  }
+  .bt-card-hotel-5 .vote-item:last-child {
+    color: #ebeced;
+  }
+  .bt-card-hotel-5 .card-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  .bt-card-hotel-5 .card-meta-item {
+    padding: 5px 14px;
+    border-radius: 4px;
+    border: 1px solid #d7d8d9;
+    font-size: 12px;
+    color: #007ae9;
+    font-weight: 700;
+  }
+  .bt-card-hotel-5 .card-price-current {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .bt-card-hotel-5 .card-price-current span {
+    font-size: 16px;
+  }
+  .bt-card-hotel-5 .card-price-old {
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 600;
+    color: #b1b4b9;
+    text-align: right;
+  }
+  .bt-card-hotel-5 .card-price-old span {
+    font-size: 12px;
+  }
+  .bt-card-hotel-5 .card-desc {
+    color: #6e798c;
+    text-align: justify;
+    margin-bottom: 32px;
+  }
+  .bt-card-hotel-5 .card-price-saving {
+    text-align: center;
+    color: #1dc071;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .bt-card-hotel-5 .card-price-saving span {
+    font-weight: 600;
+  }
+  .bt-card-hotel-5 .card-button {
+    display: block;
+    text-align: center;
+    padding: 16px 40px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    background-color: #1dc071;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    letter-spacing: 2px;
+  }
+  .bt-card-hotel-5 .card-button:hover::before {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  .bt-card-hotel-5 .card-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #fff;
+    opacity: 0.1;
+    z-index: -1;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
